@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+    <h1>🥢 好好吃饭</h1>
+    <p class="subtitle">每周饮食规划助手 — 根据你的身体数据，科学规划每餐吃什么</p>
+</div>
+
+<form action="/plan" method="post" class="form-card" id="main-form">
+
+    <!-- ===== Basic Info ===== -->
+    <div class="section">
+        <h2>📋 基本信息</h2>
+        <div class="form-row">
+            <div class="form-group">
+                <label>性别</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="gender" value="male" checked> 男</label>
+                    <label class="radio-label"><input type="radio" name="gender" value="female"> 女</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age">年龄</label>
+                <input type="number" id="age" name="age" value="30" min="10" max="100" required>
+                <span class="unit">岁</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="height_cm">身高</label>
+                <input type="number" id="height_cm" name="height_cm" value="170" min="100" max="250" required>
+                <span class="unit">cm</span>
+            </div>
+            <div class="form-group">
+                <label for="weight_kg">体重</label>
+                <input type="number" id="weight_kg" name="weight_kg" value="70" min="30" max="300" step="0.1" required>
+                <span class="unit">kg</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Activity Level ===== -->
+    <div class="section">
+        <h2>🏃 活动水平</h2>
+        <div class="radio-group">
+            {% for key, label in activity_labels.items() %}
+            <label class="radio-label"><input type="radio" name="activity_level" value="{{ key }}" {% if key == 'moderate' %}checked{% endif %}> {{ label }}</label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- ===== Goal ===== -->
+    <div class="section">
+        <h2>🎯 目标</h2>
+        <div class="radio-group" id="goal-group">
+            {% for key, label in goal_labels.items() %}
+            <label class="radio-label"><input type="radio" name="goal" value="{{ key }}" {% if key == 'maintain' %}checked{% endif %}> {{ label }}</label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- ===== Preferences ===== -->
+    <div class="section">
+        <h2>🍳 饮食偏好</h2>
+        <div class="form-group">
+            <label>口味偏好</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="tastes" value="all" checked> 都可以</label>
+                <label class="checkbox-label"><input type="checkbox" name="tastes" value="mild"> 清淡</label>
+                <label class="checkbox-label"><input type="checkbox" name="tastes" value="spicy"> 辣</label>
+                <label class="checkbox-label"><input type="checkbox" name="tastes" value="sweet_sour"> 酸甜</label>
+                <label class="checkbox-label"><input type="checkbox" name="tastes" value="savory"> 咸鲜</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>忌口</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="none" checked> 无</label>
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="pork"> 猪肉</label>
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="beef"> 牛肉</label>
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="seafood"> 海鲜</label>
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="egg"> 鸡蛋</label>
+                <label class="checkbox-label"><input type="checkbox" name="restrictions" value="soy"> 豆制品</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>每日餐数</label>
+            <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="meal_count" value="2"> 2餐</label>
+                <label class="radio-label"><input type="radio" name="meal_count" value="3" checked> 3餐</label>
+                <label class="radio-label"><input type="radio" name="meal_count" value="4"> 4餐</label>
+                <label class="radio-label"><input type="radio" name="meal_count" value="5"> 5餐</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Cooking Skill ===== -->
+    <div class="section">
+        <h2>👨‍🍳 做饭水平</h2>
+        <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="cooking_skill" value="expert" checked> 🔪 做饭达人</label>
+            <label class="radio-label"><input type="radio" name="cooking_skill" value="simple"> ⚡ 不爱做饭</label>
+        </div>
+        <p class="hint" id="simple-hint" style="display:none;">简约模式：每餐只做2道菜（主食+一道荤素搭配菜），保证营养不超标</p>
+    </div>
+
+    <!-- ===== Cheat Meal ===== -->
+    <div class="section" id="cheat-section" style="display: none;">
+        <h2>🎉 放纵餐设置</h2>
+        <p class="hint">减脂或增肌期间，每周安排一顿放纵餐，既满足口腹之欲，又不会影响整体进度。</p>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="cheat_day">放纵日</label>
+                <select id="cheat_day" name="cheat_day">
+                    {% for i in range(7) %}
+                    <option value="{{ i }}" {% if i == 5 %}selected{% endif %}>{{ day_names[i] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cheat_meal">放纵餐次</label>
+                <select id="cheat_meal" name="cheat_meal">
+                    <option value="1" selected>午餐</option>
+                    <option value="2">晚餐</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn-submit">📊 生成每周食谱</button>
+</form>
+
+<script>
+// Show/hide cooking hint
+const cookingRadios = document.querySelectorAll('input[name="cooking_skill"]');
+const simpleHint = document.getElementById('simple-hint');
+
+cookingRadios.forEach(r => r.addEventListener('change', function() {
+    simpleHint.style.display = this.value === 'simple' ? 'block' : 'none';
+}));
+
+// Show/hide cheat meal section based on goal
+const goalRadios = document.querySelectorAll('input[name="goal"]');
+const cheatSection = document.getElementById('cheat-section');
+
+function updateCheatSection() {
+    const goal = document.querySelector('input[name="goal"]:checked').value;
+    cheatSection.style.display = (goal === 'lose' || goal === 'gain') ? 'block' : 'none';
+}
+
+goalRadios.forEach(r => r.addEventListener('change', updateCheatSection));
+updateCheatSection();
+
+// Handle "都可以" taste checkbox - uncheck others when selected
+const tasteAll = document.querySelector('input[name="tastes"][value="all"]');
+const otherTastes = document.querySelectorAll('input[name="tastes"]:not([value="all"])');
+
+tasteAll.addEventListener('change', function() {
+    if (this.checked) {
+        otherTastes.forEach(cb => cb.checked = false);
+    }
+});
+
+otherTastes.forEach(cb => {
+    cb.addEventListener('change', function() {
+        if (this.checked) {
+            tasteAll.checked = false;
+        }
+        // If none checked, re-check "都可以"
+        if (!document.querySelector('input[name="tastes"]:checked')) {
+            tasteAll.checked = true;
+        }
+    });
+});
+
+// Handle "无" restriction checkbox
+const restrictNone = document.querySelector('input[name="restrictions"][value="none"]');
+const otherRestricts = document.querySelectorAll('input[name="restrictions"]:not([value="none"])');
+
+restrictNone.addEventListener('change', function() {
+    if (this.checked) {
+        otherRestricts.forEach(cb => cb.checked = false);
+    }
+});
+
+otherRestricts.forEach(cb => {
+    cb.addEventListener('change', function() {
+        if (this.checked) {
+            restrictNone.checked = false;
+        }
+        if (!document.querySelector('input[name="restrictions"]:checked')) {
+            restrictNone.checked = true;
+        }
+    });
+});
+</script>
+{% endblock %}

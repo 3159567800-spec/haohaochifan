@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+    <h1>🥢 好好吃饭 — 每周饮食方案</h1>
+    <a href="/" class="btn-back">← 重新设置</a>
+</div>
+
+<!-- User Summary -->
+<div class="summary-card">
+    <div class="summary-row">
+        <span class="summary-item">👤 {{ display.gender }} · {{ display.age }}岁 · {{ display.height_cm }}cm · {{ display.weight_kg }}kg</span>
+        <span class="summary-item">🏃 {{ display.activity_level }}</span>
+        <span class="summary-item">🎯 {{ display.goal }}</span>
+        <span class="summary-item">🍽️ {{ display.meal_count }}餐/天</span>
+    </div>
+    <div class="summary-nutrition">
+        <div class="macro-box">
+            <span class="macro-value">{{ user_params.daily_calories }}</span>
+            <span class="macro-label">每日目标 (kcal)</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ user_params.daily_macros.protein_g }}g</span>
+            <span class="macro-label">蛋白质</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ user_params.daily_macros.carbs_g }}g</span>
+            <span class="macro-label">碳水</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ user_params.daily_macros.fat_g }}g</span>
+            <span class="macro-label">脂肪</span>
+        </div>
+    </div>
+    <div class="summary-info">
+        <span>基础代谢 BMR: {{ user_params.bmr }} kcal</span>
+        <span>总消耗 TDEE: {{ user_params.tdee }} kcal</span>
+        {% if display.cheat_day %}
+        <span class="cheat-badge">🎉 放纵日: 每{{ display.cheat_day }}</span>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Weekly Plan -->
+<div class="week-plan">
+    {% for day in week_plan %}
+    <div class="day-card {% if day.is_cheat_day %}cheat-day{% endif %}">
+        <div class="day-header" onclick="toggleDay(this)">
+            <div class="day-title">
+                <h3>{{ day.day_name }}</h3>
+                {% if day.is_cheat_day %}
+                <span class="cheat-tag">🎉 放纵日</span>
+                {% endif %}
+            </div>
+            <div class="day-calories">
+                <span>{{ day.day_total.calories }} kcal</span>
+                <span class="day-macros">P: {{ day.day_total.protein_g }}g · C: {{ day.day_total.carbs_g }}g · F: {{ day.day_total.fat_g }}g</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="day-content">
+            {% for meal in day.meals %}
+            <div class="meal-block {% if meal.is_cheat %}cheat-meal{% endif %}">
+                <div class="meal-header">
+                    <h4>{{ meal.name }}</h4>
+                    {% if meal.is_cheat %}
+                    <span class="cheat-tag">🍖 放纵餐</span>
+                    {% endif %}
+                    <span class="meal-target">目标 {{ meal.target_calories }} kcal</span>
+                </div>
+                <div class="meal-dishes">
+                    {% for item in meal.meal.dishes %}
+                    <div class="dish-card">
+                        <div class="dish-name">
+                            {% if item.recipe.category not in ('staple', 'breakfast') %}
+                            <a href="https://www.xiaohongshu.com/search_result?keyword={{ item.recipe.name | urlencode }}&source=web_search_result_notes" target="_blank" rel="noopener" class="recipe-link">{{ item.recipe.name }} <span class="link-icon">🔗</span></a>
+                            {% else %}
+                            {{ item.recipe.name }}
+                            {% endif %}
+                        </div>
+                        <div class="dish-nutrition">
+                            <span>{{ item.nutrition.calories }} kcal</span>
+                            <span>蛋白质 {{ item.nutrition.protein_g }}g</span>
+                            <span>碳水 {{ item.nutrition.carbs_g }}g</span>
+                            <span>脂肪 {{ item.nutrition.fat_g }}g</span>
+                        </div>
+                        <div class="dish-ingredients">
+                            {% for ing in item.ingredients %}
+                            <span class="ingredient-tag">{{ ing.name }} <strong>{{ ing.amount_g }}g</strong></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="meal-total">
+                    本餐合计: {{ meal.meal.total_nutrition.calories }} kcal ·
+                    蛋白质 {{ meal.meal.total_nutrition.protein_g }}g ·
+                    碳水 {{ meal.meal.total_nutrition.carbs_g }}g ·
+                    脂肪 {{ meal.meal.total_nutrition.fat_g }}g
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Weekly Summary -->
+<div class="week-summary">
+    <h3>📊 本周营养汇总</h3>
+    <div class="summary-nutrition">
+        <div class="macro-box">
+            <span class="macro-value">{{ week_total.calories }}</span>
+            <span class="macro-label">周总热量 (kcal)</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ week_total.protein_g }}g</span>
+            <span class="macro-label">周总蛋白质</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ week_total.carbs_g }}g</span>
+            <span class="macro-label">周总碳水</span>
+        </div>
+        <div class="macro-box">
+            <span class="macro-value">{{ week_total.fat_g }}g</span>
+            <span class="macro-label">周总脂肪</span>
+        </div>
+    </div>
+</div>
+
+<!-- Shopping List -->
+<div class="shopping-list">
+    <h3>🛒 本周食材采购清单</h3>
+    <div class="shopping-categories">
+        {% for cat in shopping_list %}
+        <div class="shopping-category">
+            <div class="shopping-cat-header">
+                <span class="shopping-cat-icon">{{ cat.icon }}</span>
+                <span class="shopping-cat-name">{{ cat.category }}</span>
+                <span class="shopping-cat-count">{{ cat.ingredients|length }}种</span>
+            </div>
+            <div class="shopping-cat-items">
+                {% for item in cat.ingredients %}
+                <span class="shopping-tag">
+                    {{ item.name }} <strong>{{ item.amount_g }}g</strong>
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function toggleDay(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.toggle-icon');
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.textContent = '▼';
+    } else {
+        content.style.display = 'none';
+        icon.textContent = '▶';
+    }
+}
+
+// Collapse all days except today by default
+document.addEventListener('DOMContentLoaded', function() {
+    const dayCards = document.querySelectorAll('.day-card');
+    const today = new Date().getDay(); // 0=Sun, 1=Mon...
+    const todayIndex = today === 0 ? 6 : today - 1; // Convert to 0=Mon
+
+    dayCards.forEach(function(card, idx) {
+        if (idx !== todayIndex) {
+            const content = card.querySelector('.day-content');
+            if (content) content.style.display = 'none';
+            const icon = card.querySelector('.toggle-icon');
+            if (icon) icon.textContent = '▶';
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,994 @@
+[
+  {
+    "id": "b01",
+    "name": "牛奶+全麦面包",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "牛奶", "amount_g": 250},
+      {"name": "全麦面包", "amount_g": 80}
+    ],
+    "nutrition": {"calories": 310, "protein_g": 14, "fat_g": 8, "carbs_g": 44},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "b02",
+    "name": "煮鸡蛋+豆浆",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "鸡蛋", "amount_g": 60},
+      {"name": "豆浆（成品）", "amount_g": 300}
+    ],
+    "nutrition": {"calories": 190, "protein_g": 15, "fat_g": 9, "carbs_g": 12},
+    "taste": ["mild"],
+    "allergens": ["egg", "soy"]
+  },
+  {
+    "id": "b03",
+    "name": "酸奶+水果+坚果",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "原味酸奶", "amount_g": 150},
+      {"name": "香蕉", "amount_g": 100},
+      {"name": "混合坚果", "amount_g": 15}
+    ],
+    "nutrition": {"calories": 280, "protein_g": 9, "fat_g": 12, "carbs_g": 36},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+  {
+    "id": "b04",
+    "name": "豆浆+包子",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "豆浆（成品）", "amount_g": 300},
+      {"name": "包子（成品）", "amount_g": 150}
+    ],
+    "nutrition": {"calories": 370, "protein_g": 16, "fat_g": 10, "carbs_g": 52},
+    "taste": ["savory"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "b05",
+    "name": "即食燕麦+牛奶",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "即食燕麦片", "amount_g": 40},
+      {"name": "牛奶", "amount_g": 250}
+    ],
+    "nutrition": {"calories": 290, "protein_g": 13, "fat_g": 9, "carbs_g": 40},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "b06",
+    "name": "全麦三明治",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "全麦面包", "amount_g": 80},
+      {"name": "火腿片", "amount_g": 30},
+      {"name": "鸡蛋", "amount_g": 60},
+      {"name": "生菜", "amount_g": 30}
+    ],
+    "nutrition": {"calories": 350, "protein_g": 22, "fat_g": 14, "carbs_g": 34},
+    "taste": ["savory"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "b07",
+    "name": "牛奶+煮蛋+面包",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "牛奶", "amount_g": 250},
+      {"name": "鸡蛋", "amount_g": 60},
+      {"name": "全麦面包", "amount_g": 50}
+    ],
+    "nutrition": {"calories": 320, "protein_g": 20, "fat_g": 12, "carbs_g": 34},
+    "taste": ["mild"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "b08",
+    "name": "牛奶+蒸红薯",
+    "category": "breakfast",
+    "meal_type": "breakfast",
+    "ingredients": [
+      {"name": "牛奶", "amount_g": 250},
+      {"name": "红薯", "amount_g": 150}
+    ],
+    "nutrition": {"calories": 300, "protein_g": 10, "fat_g": 7, "carbs_g": 50},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+
+  {
+    "id": "m01",
+    "name": "青椒肉丝",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪里脊肉", "amount_g": 100},
+      {"name": "青椒", "amount_g": 80},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "姜", "amount_g": 3},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 280, "protein_g": 22, "fat_g": 16, "carbs_g": 10},
+    "taste": ["savory"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "m02",
+    "name": "番茄炒蛋",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "鸡蛋", "amount_g": 80},
+      {"name": "番茄", "amount_g": 150},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2},
+      {"name": "糖", "amount_g": 3}
+    ],
+    "nutrition": {"calories": 220, "protein_g": 14, "fat_g": 15, "carbs_g": 10},
+    "taste": ["sweet_sour"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "m03",
+    "name": "红烧排骨",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪肋排", "amount_g": 150},
+      {"name": "酱油", "amount_g": 15},
+      {"name": "糖", "amount_g": 5},
+      {"name": "料酒", "amount_g": 10},
+      {"name": "姜", "amount_g": 5},
+      {"name": "葱", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 450, "protein_g": 28, "fat_g": 32, "carbs_g": 12},
+    "taste": ["savory", "sweet_sour"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "m04",
+    "name": "宫保鸡丁",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "鸡胸肉", "amount_g": 120},
+      {"name": "花生米", "amount_g": 15},
+      {"name": "黄瓜", "amount_g": 50},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "干辣椒", "amount_g": 5},
+      {"name": "酱油", "amount_g": 8},
+      {"name": "醋", "amount_g": 5},
+      {"name": "食用油", "amount_g": 10},
+      {"name": "淀粉", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 320, "protein_g": 28, "fat_g": 18, "carbs_g": 14},
+    "taste": ["spicy", "sweet_sour"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "m05",
+    "name": "清蒸鲈鱼",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "鲈鱼", "amount_g": 200},
+      {"name": "姜", "amount_g": 10},
+      {"name": "葱", "amount_g": 10},
+      {"name": "蒸鱼豉油", "amount_g": 15},
+      {"name": "食用油", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 250, "protein_g": 36, "fat_g": 10, "carbs_g": 2},
+    "taste": ["mild", "savory"],
+    "allergens": ["seafood", "soy"]
+  },
+  {
+    "id": "m06",
+    "name": "土豆炖牛肉",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "牛腩", "amount_g": 120},
+      {"name": "土豆", "amount_g": 100},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "洋葱", "amount_g": 20},
+      {"name": "酱油", "amount_g": 15},
+      {"name": "姜", "amount_g": 5},
+      {"name": "八角", "amount_g": 2},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 380, "protein_g": 26, "fat_g": 18, "carbs_g": 30},
+    "taste": ["savory"],
+    "allergens": ["beef", "soy"]
+  },
+  {
+    "id": "m07",
+    "name": "回锅肉",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "五花肉", "amount_g": 100},
+      {"name": "蒜苗", "amount_g": 80},
+      {"name": "豆瓣酱", "amount_g": 10},
+      {"name": "豆豉", "amount_g": 5},
+      {"name": "姜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 420, "protein_g": 20, "fat_g": 35, "carbs_g": 8},
+    "taste": ["spicy", "savory"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "m08",
+    "name": "葱爆牛肉",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "牛里脊", "amount_g": 120},
+      {"name": "大葱", "amount_g": 80},
+      {"name": "姜", "amount_g": 5},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "料酒", "amount_g": 8},
+      {"name": "食用油", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 300, "protein_g": 27, "fat_g": 18, "carbs_g": 8},
+    "taste": ["savory"],
+    "allergens": ["beef", "soy"]
+  },
+  {
+    "id": "m09",
+    "name": "可乐鸡翅",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "鸡翅中", "amount_g": 150},
+      {"name": "可乐", "amount_g": 100},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "姜", "amount_g": 5},
+      {"name": "料酒", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 350, "protein_g": 24, "fat_g": 20, "carbs_g": 18},
+    "taste": ["sweet_sour", "savory"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "m10",
+    "name": "糖醋里脊",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪里脊肉", "amount_g": 120},
+      {"name": "番茄酱", "amount_g": 15},
+      {"name": "糖", "amount_g": 10},
+      {"name": "醋", "amount_g": 10},
+      {"name": "面粉", "amount_g": 20},
+      {"name": "鸡蛋", "amount_g": 20},
+      {"name": "食用油", "amount_g": 15}
+    ],
+    "nutrition": {"calories": 360, "protein_g": 22, "fat_g": 18, "carbs_g": 28},
+    "taste": ["sweet_sour"],
+    "allergens": ["pork", "egg"]
+  },
+  {
+    "id": "m11",
+    "name": "红烧牛肉",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "牛腩", "amount_g": 150},
+      {"name": "土豆", "amount_g": 80},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "酱油", "amount_g": 15},
+      {"name": "糖", "amount_g": 5},
+      {"name": "姜", "amount_g": 5},
+      {"name": "葱", "amount_g": 10},
+      {"name": "八角", "amount_g": 2},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 420, "protein_g": 30, "fat_g": 22, "carbs_g": 26},
+    "taste": ["savory"],
+    "allergens": ["beef", "soy"]
+  },
+  {
+    "id": "m12",
+    "name": "鱼香肉丝",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪里脊肉", "amount_g": 80},
+      {"name": "木耳", "amount_g": 30},
+      {"name": "笋", "amount_g": 40},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "泡椒", "amount_g": 10},
+      {"name": "豆瓣酱", "amount_g": 8},
+      {"name": "醋", "amount_g": 8},
+      {"name": "糖", "amount_g": 5},
+      {"name": "食用油", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 310, "protein_g": 18, "fat_g": 20, "carbs_g": 16},
+    "taste": ["spicy", "sweet_sour"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "m13",
+    "name": "香菇鸡块",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "鸡腿肉", "amount_g": 150},
+      {"name": "干香菇", "amount_g": 15},
+      {"name": "青椒", "amount_g": 30},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "姜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 330, "protein_g": 30, "fat_g": 18, "carbs_g": 10},
+    "taste": ["savory"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "m14",
+    "name": "孜然牛肉",
+    "category": "meat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "牛里脊", "amount_g": 120},
+      {"name": "洋葱", "amount_g": 50},
+      {"name": "孜然粉", "amount_g": 3},
+      {"name": "辣椒粉", "amount_g": 2},
+      {"name": "酱油", "amount_g": 8},
+      {"name": "食用油", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 290, "protein_g": 28, "fat_g": 16, "carbs_g": 8},
+    "taste": ["spicy", "savory"],
+    "allergens": ["beef", "soy"]
+  },
+
+  {
+    "id": "v01",
+    "name": "蒜蓉西兰花",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "西兰花", "amount_g": 200},
+      {"name": "蒜", "amount_g": 10},
+      {"name": "食用油", "amount_g": 5},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 90, "protein_g": 8, "fat_g": 6, "carbs_g": 8},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "v02",
+    "name": "酸辣土豆丝",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "土豆", "amount_g": 150},
+      {"name": "青椒", "amount_g": 15},
+      {"name": "红椒", "amount_g": 15},
+      {"name": "干辣椒", "amount_g": 3},
+      {"name": "醋", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 160, "protein_g": 3, "fat_g": 8, "carbs_g": 22},
+    "taste": ["spicy", "sweet_sour"],
+    "allergens": []
+  },
+  {
+    "id": "v03",
+    "name": "麻婆豆腐",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "嫩豆腐", "amount_g": 150},
+      {"name": "猪肉末", "amount_g": 30},
+      {"name": "豆瓣酱", "amount_g": 10},
+      {"name": "花椒粉", "amount_g": 2},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "淀粉", "amount_g": 3}
+    ],
+    "nutrition": {"calories": 260, "protein_g": 18, "fat_g": 18, "carbs_g": 8},
+    "taste": ["spicy"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "v04",
+    "name": "蚝油生菜",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "生菜", "amount_g": 200},
+      {"name": "蚝油", "amount_g": 10},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 70, "protein_g": 3, "fat_g": 5, "carbs_g": 6},
+    "taste": ["mild", "savory"],
+    "allergens": ["seafood"]
+  },
+  {
+    "id": "v05",
+    "name": "凉拌黄瓜",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "黄瓜", "amount_g": 200},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "醋", "amount_g": 10},
+      {"name": "香油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 65, "protein_g": 2, "fat_g": 4, "carbs_g": 6},
+    "taste": ["sweet_sour", "mild"],
+    "allergens": []
+  },
+  {
+    "id": "v06",
+    "name": "家常豆腐",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "老豆腐", "amount_g": 150},
+      {"name": "青椒", "amount_g": 50},
+      {"name": "木耳", "amount_g": 20},
+      {"name": "酱油", "amount_g": 8},
+      {"name": "豆瓣酱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 220, "protein_g": 15, "fat_g": 15, "carbs_g": 10},
+    "taste": ["spicy", "savory"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "v07",
+    "name": "清炒油菜",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "油菜", "amount_g": 200},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 85, "protein_g": 3, "fat_g": 8, "carbs_g": 4},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "v08",
+    "name": "干煸四季豆",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "四季豆", "amount_g": 150},
+      {"name": "干辣椒", "amount_g": 5},
+      {"name": "花椒", "amount_g": 2},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "食用油", "amount_g": 12},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 160, "protein_g": 5, "fat_g": 12, "carbs_g": 12},
+    "taste": ["spicy"],
+    "allergens": []
+  },
+  {
+    "id": "v09",
+    "name": "番茄炒菜花",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "菜花", "amount_g": 150},
+      {"name": "番茄", "amount_g": 80},
+      {"name": "番茄酱", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 100, "protein_g": 5, "fat_g": 8, "carbs_g": 12},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+  {
+    "id": "v10",
+    "name": "蒜蓉空心菜",
+    "category": "veg",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "空心菜", "amount_g": 200},
+      {"name": "蒜", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 90, "protein_g": 5, "fat_g": 8, "carbs_g": 4},
+    "taste": ["mild"],
+    "allergens": []
+  },
+
+  {
+    "id": "s01",
+    "name": "番茄蛋汤",
+    "category": "soup",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "番茄", "amount_g": 100},
+      {"name": "鸡蛋", "amount_g": 40},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 90, "protein_g": 6, "fat_g": 5, "carbs_g": 6},
+    "taste": ["mild", "sweet_sour"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "s02",
+    "name": "紫菜蛋花汤",
+    "category": "soup",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "紫菜", "amount_g": 5},
+      {"name": "鸡蛋", "amount_g": 40},
+      {"name": "虾皮", "amount_g": 3},
+      {"name": "香油", "amount_g": 2},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 80, "protein_g": 8, "fat_g": 5, "carbs_g": 2},
+    "taste": ["mild"],
+    "allergens": ["egg", "seafood"]
+  },
+  {
+    "id": "s03",
+    "name": "冬瓜虾皮汤",
+    "category": "soup",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "冬瓜", "amount_g": 150},
+      {"name": "虾皮", "amount_g": 5},
+      {"name": "食用油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2},
+      {"name": "葱", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 50, "protein_g": 3, "fat_g": 3, "carbs_g": 4},
+    "taste": ["mild"],
+    "allergens": ["seafood"]
+  },
+  {
+    "id": "s04",
+    "name": "酸辣汤",
+    "category": "soup",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "豆腐", "amount_g": 50},
+      {"name": "木耳", "amount_g": 10},
+      {"name": "鸡蛋", "amount_g": 30},
+      {"name": "胡椒粉", "amount_g": 2},
+      {"name": "醋", "amount_g": 10},
+      {"name": "淀粉", "amount_g": 5},
+      {"name": "食用油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 120, "protein_g": 8, "fat_g": 6, "carbs_g": 10},
+    "taste": ["spicy", "sweet_sour"],
+    "allergens": ["egg", "soy"]
+  },
+  {
+    "id": "s05",
+    "name": "白菜豆腐汤",
+    "category": "soup",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "白菜", "amount_g": 100},
+      {"name": "嫩豆腐", "amount_g": 80},
+      {"name": "食用油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2},
+      {"name": "葱", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 80, "protein_g": 6, "fat_g": 4, "carbs_g": 4},
+    "taste": ["mild"],
+    "allergens": ["soy"]
+  },
+
+  {
+    "id": "st01",
+    "name": "白米饭",
+    "category": "staple",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 100}
+    ],
+    "nutrition": {"calories": 350, "protein_g": 7, "fat_g": 0.5, "carbs_g": 78},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "st02",
+    "name": "杂粮饭",
+    "category": "staple",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 70},
+      {"name": "小米", "amount_g": 20},
+      {"name": "燕麦", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 340, "protein_g": 8, "fat_g": 1.5, "carbs_g": 74},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "st03",
+    "name": "馒头",
+    "category": "staple",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "馒头（成品）", "amount_g": 120}
+    ],
+    "nutrition": {"calories": 280, "protein_g": 8, "fat_g": 0.8, "carbs_g": 58},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "st04",
+    "name": "红薯饭",
+    "category": "staple",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 70},
+      {"name": "红薯", "amount_g": 80}
+    ],
+    "nutrition": {"calories": 310, "protein_g": 6, "fat_g": 0.5, "carbs_g": 70},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+
+  {
+    "id": "c01",
+    "name": "红烧肉",
+    "category": "cheat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "五花肉", "amount_g": 150},
+      {"name": "酱油", "amount_g": 15},
+      {"name": "糖", "amount_g": 8},
+      {"name": "料酒", "amount_g": 10},
+      {"name": "姜", "amount_g": 5},
+      {"name": "葱", "amount_g": 10},
+      {"name": "八角", "amount_g": 2},
+      {"name": "食用油", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 550, "protein_g": 22, "fat_g": 48, "carbs_g": 10},
+    "taste": ["savory", "sweet_sour"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "c02",
+    "name": "糖醋排骨",
+    "category": "cheat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪肋排", "amount_g": 180},
+      {"name": "糖", "amount_g": 15},
+      {"name": "醋", "amount_g": 15},
+      {"name": "酱油", "amount_g": 8},
+      {"name": "番茄酱", "amount_g": 10},
+      {"name": "食用油", "amount_g": 15},
+      {"name": "姜", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 580, "protein_g": 32, "fat_g": 38, "carbs_g": 26},
+    "taste": ["sweet_sour"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "c03",
+    "name": "水煮肉片",
+    "category": "cheat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "猪里脊肉", "amount_g": 120},
+      {"name": "油菜", "amount_g": 80},
+      {"name": "豆芽", "amount_g": 60},
+      {"name": "干辣椒", "amount_g": 15},
+      {"name": "花椒", "amount_g": 5},
+      {"name": "豆瓣酱", "amount_g": 15},
+      {"name": "食用油", "amount_g": 20},
+      {"name": "蒜", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 480, "protein_g": 28, "fat_g": 36, "carbs_g": 12},
+    "taste": ["spicy"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "c04",
+    "name": "椒盐大虾",
+    "category": "cheat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "基围虾", "amount_g": 150},
+      {"name": "椒盐", "amount_g": 5},
+      {"name": "面粉", "amount_g": 20},
+      {"name": "食用油", "amount_g": 20},
+      {"name": "蒜", "amount_g": 10},
+      {"name": "干辣椒", "amount_g": 5}
+    ],
+    "nutrition": {"calories": 450, "protein_g": 32, "fat_g": 28, "carbs_g": 18},
+    "taste": ["spicy", "savory"],
+    "allergens": ["seafood"]
+  },
+  {
+    "id": "c05",
+    "name": "软炸虾仁",
+    "category": "cheat",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "虾仁", "amount_g": 150},
+      {"name": "鸡蛋", "amount_g": 30},
+      {"name": "面粉", "amount_g": 30},
+      {"name": "食用油", "amount_g": 20},
+      {"name": "盐", "amount_g": 3},
+      {"name": "胡椒粉", "amount_g": 1}
+    ],
+    "nutrition": {"calories": 420, "protein_g": 30, "fat_g": 24, "carbs_g": 22},
+    "taste": ["savory"],
+    "allergens": ["seafood", "egg"]
+  },
+
+  {
+    "id": "sn01",
+    "name": "酸奶",
+    "category": "snack",
+    "meal_type": "snack",
+    "ingredients": [
+      {"name": "原味酸奶", "amount_g": 150}
+    ],
+    "nutrition": {"calories": 90, "protein_g": 5, "fat_g": 3, "carbs_g": 11},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+  {
+    "id": "sn02",
+    "name": "水果拼盘",
+    "category": "snack",
+    "meal_type": "snack",
+    "ingredients": [
+      {"name": "苹果", "amount_g": 80},
+      {"name": "香蕉", "amount_g": 60}
+    ],
+    "nutrition": {"calories": 120, "protein_g": 1.5, "fat_g": 0.5, "carbs_g": 30},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+  {
+    "id": "sn03",
+    "name": "坚果+牛奶",
+    "category": "snack",
+    "meal_type": "snack",
+    "ingredients": [
+      {"name": "混合坚果", "amount_g": 20},
+      {"name": "牛奶", "amount_g": 200}
+    ],
+    "nutrition": {"calories": 200, "protein_g": 8, "fat_g": 14, "carbs_g": 12},
+    "taste": ["mild"],
+    "allergens": []
+  },
+  {
+    "id": "sn04",
+    "name": "全麦面包+花生酱",
+    "category": "snack",
+    "meal_type": "snack",
+    "ingredients": [
+      {"name": "全麦面包", "amount_g": 50},
+      {"name": "花生酱", "amount_g": 15}
+    ],
+    "nutrition": {"calories": 210, "protein_g": 8, "fat_g": 10, "carbs_g": 24},
+    "taste": ["savory"],
+    "allergens": []
+  },
+  {
+    "id": "sn05",
+    "name": "蒸紫薯",
+    "category": "snack",
+    "meal_type": "snack",
+    "ingredients": [
+      {"name": "紫薯", "amount_g": 150}
+    ],
+    "nutrition": {"calories": 130, "protein_g": 2, "fat_g": 0.2, "carbs_g": 30},
+    "taste": ["sweet_sour"],
+    "allergens": []
+  },
+
+  {
+    "id": "cb01",
+    "name": "西红柿鸡蛋面",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "面条（干）", "amount_g": 100},
+      {"name": "鸡蛋", "amount_g": 60},
+      {"name": "番茄", "amount_g": 150},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 450, "protein_g": 18, "fat_g": 14, "carbs_g": 62},
+    "taste": ["sweet_sour", "mild"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "cb02",
+    "name": "青椒肉丝面",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "面条（干）", "amount_g": 100},
+      {"name": "猪里脊肉", "amount_g": 80},
+      {"name": "青椒", "amount_g": 80},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 480, "protein_g": 24, "fat_g": 16, "carbs_g": 60},
+    "taste": ["savory"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "cb03",
+    "name": "蛋炒饭",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 100},
+      {"name": "鸡蛋", "amount_g": 80},
+      {"name": "胡萝卜", "amount_g": 50},
+      {"name": "青豆", "amount_g": 30},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 10},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 520, "protein_g": 20, "fat_g": 18, "carbs_g": 68},
+    "taste": ["savory", "mild"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "cb04",
+    "name": "番茄炒蛋盖饭",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 100},
+      {"name": "鸡蛋", "amount_g": 80},
+      {"name": "番茄", "amount_g": 150},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8},
+      {"name": "盐", "amount_g": 2},
+      {"name": "糖", "amount_g": 3}
+    ],
+    "nutrition": {"calories": 530, "protein_g": 20, "fat_g": 17, "carbs_g": 74},
+    "taste": ["sweet_sour"],
+    "allergens": ["egg"]
+  },
+  {
+    "id": "cb05",
+    "name": "青椒肉丝盖饭",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 100},
+      {"name": "猪里脊肉", "amount_g": 100},
+      {"name": "青椒", "amount_g": 80},
+      {"name": "蒜", "amount_g": 5},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 590, "protein_g": 26, "fat_g": 18, "carbs_g": 78},
+    "taste": ["savory"],
+    "allergens": ["pork", "soy"]
+  },
+  {
+    "id": "cb06",
+    "name": "红烧牛肉面",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "面条（干）", "amount_g": 100},
+      {"name": "牛腩", "amount_g": 100},
+      {"name": "番茄", "amount_g": 80},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "酱油", "amount_g": 10},
+      {"name": "姜", "amount_g": 5},
+      {"name": "八角", "amount_g": 2},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 550, "protein_g": 28, "fat_g": 18, "carbs_g": 66},
+    "taste": ["savory"],
+    "allergens": ["beef", "soy"]
+  },
+  {
+    "id": "cb07",
+    "name": "麻辣烫（家常版）",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "面条（干）", "amount_g": 80},
+      {"name": "火锅丸子", "amount_g": 100},
+      {"name": "白菜", "amount_g": 100},
+      {"name": "豆腐皮", "amount_g": 50},
+      {"name": "金针菇", "amount_g": 50},
+      {"name": "火锅底料", "amount_g": 30},
+      {"name": "牛奶", "amount_g": 50}
+    ],
+    "nutrition": {"calories": 560, "protein_g": 22, "fat_g": 26, "carbs_g": 58},
+    "taste": ["spicy", "savory"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "cb08",
+    "name": "鸡蛋杂酱面",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "面条（干）", "amount_g": 100},
+      {"name": "鸡蛋", "amount_g": 60},
+      {"name": "黄瓜", "amount_g": 80},
+      {"name": "黄豆酱", "amount_g": 15},
+      {"name": "葱", "amount_g": 5},
+      {"name": "食用油", "amount_g": 8}
+    ],
+    "nutrition": {"calories": 470, "protein_g": 20, "fat_g": 15, "carbs_g": 62},
+    "taste": ["savory"],
+    "allergens": ["egg", "soy"]
+  },
+  {
+    "id": "cb09",
+    "name": "宫保鸡丁盖饭",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "大米", "amount_g": 100},
+      {"name": "鸡胸肉", "amount_g": 100},
+      {"name": "花生米", "amount_g": 15},
+      {"name": "黄瓜", "amount_g": 50},
+      {"name": "胡萝卜", "amount_g": 30},
+      {"name": "干辣椒", "amount_g": 5},
+      {"name": "酱油", "amount_g": 8},
+      {"name": "醋", "amount_g": 5},
+      {"name": "食用油", "amount_g": 10}
+    ],
+    "nutrition": {"calories": 580, "protein_g": 30, "fat_g": 20, "carbs_g": 72},
+    "taste": ["spicy", "sweet_sour"],
+    "allergens": ["soy"]
+  },
+  {
+    "id": "cb10",
+    "name": "清汤抄手（馄饨）",
+    "category": "combo",
+    "meal_type": "lunch_dinner",
+    "ingredients": [
+      {"name": "速冻馄饨", "amount_g": 200},
+      {"name": "紫菜", "amount_g": 3},
+      {"name": "虾皮", "amount_g": 3},
+      {"name": "葱", "amount_g": 5},
+      {"name": "香油", "amount_g": 3},
+      {"name": "盐", "amount_g": 2}
+    ],
+    "nutrition": {"calories": 420, "protein_g": 18, "fat_g": 14, "carbs_g": 52},
+    "taste": ["mild", "savory"],
+    "allergens": ["pork", "seafood"]
+  }
+]
