@@ -72,7 +72,7 @@
                     <div class="dish-card">
                         <div class="dish-name">
                             {% if item.recipe.category not in ('staple', 'breakfast') %}
-                            <a href="https://www.xiaohongshu.com/search_result?keyword={{ item.recipe.name | urlencode }}&source=web_search_result_notes" target="_blank" rel="noopener" class="recipe-link">{{ item.recipe.name }} <span class="link-icon">🔗</span></a>
+                            <a href="https://www.xiachufang.com/search/?keyword={{ item.recipe.name | urlencode }}" target="_blank" rel="noopener" class="recipe-link">{{ item.recipe.name }} <span class="link-icon">🔗</span></a>
                             {% else %}
                             {{ item.recipe.name }}
                             {% endif %}
